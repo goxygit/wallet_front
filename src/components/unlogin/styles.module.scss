@@ -1,0 +1,33 @@
+@import '../../app/variables';
+.direct_to_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    border: 2px solid $home-border-color;
+    .h2{
+        margin: 0;
+        font-weight: normal;
+        font-family: 'calibri';
+        color: $home-text-color;
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    .buttom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 160px;
+        height: 32px;
+        border-radius: 8px;
+        padding: 4px;
+        background-color: $home-buttom-color;
+        color: $home-text-color;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}

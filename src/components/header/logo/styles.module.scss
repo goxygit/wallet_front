@@ -1,0 +1,12 @@
+@import '../../../app/variables';
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'calibri';
+    margin: 0;
+    font-weight: normal;
+    font-size: 32px;
+    color: $home-text-color;
+   
+}

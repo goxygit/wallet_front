@@ -1,0 +1,51 @@
+@import '../../../app/variables';
+.login_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 300px;
+    color: $home-text-color;
+    font-family: 'SUSE';
+    .h2{
+        font-size: 28px;
+        font-weight: normal;
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        
+        padding: 12px;
+        border-radius: 8px;
+        div{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            position: relative;
+        }
+        input{
+            margin-bottom: 32px;
+            height: 40px;
+            outline: none;
+            background-color: transparentize($color: #00000000, $amount: 0);
+            border: 2px solid $home-border-color;
+            border-radius: 6px;
+            color: $home-text-color;
+            
+            padding: 0 8px;
+            font-size: 17px;
+        }
+        span{
+            font-size: 13px;
+            position: absolute;
+            bottom: 8px;
+        }
+        .send{
+            background-color: $home-buttom-color;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

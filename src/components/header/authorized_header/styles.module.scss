@@ -1,0 +1,31 @@
+@import '../../../app/variables';
+.nav{
+    display: flex;
+    align-items: center;
+    font-family: 'SUSE';
+    .link{
+        color: $home-link-color;
+        text-decoration: none;
+        margin-right: 18px;
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $header-button-color;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 28px;
+        color: #faffff;
+        cursor: pointer;
+        position: relative;
+      }
+      
+      .button svg {
+        margin-left: 8px; /* Отступ иконки от текста */
+        width: 24px;
+        height: 24px;
+      }
+      
+}

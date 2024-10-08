@@ -1,0 +1,11 @@
+@import '../../../app/variables';
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'calibri';
+    margin: 0;
+    font-weight: 800;
+    font-size: 16px;
+    color: $home-link-color;
+}
