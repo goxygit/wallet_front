@@ -1,24 +1,36 @@
-import s from './styles.module.scss'
+import s from "./styles.module.scss";
 //@ts-ignore
-import Link from 'next/link'
-import log_out from '../../../../public/log_out_icon.png'
-export default ()=>{
-    return(
-        <nav className={s.nav}>
-            
-            <Link className={s.link} href="/">Home</Link>
-            <Link className={s.link} href="/Transactions">Transactions</Link>
-            <Link className={s.link} href="/Categories">Categories</Link>
-            <button className={s.button}>Log Out
-            
-          
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="24.000000pt" height="24.000000pt" viewBox="0 0 512.000000 512.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-fill="#fff" stroke="none">
-<path d="M740 5113 c-201 -34 -381 -193 -443 -388 l-22 -70 0 -1775 0 -1775
+import Link from "next/link";
+import log_out from "../../../../public/log_out_icon.png";
+export default () => {
+  return (
+    <nav className={s.nav}>
+      <Link className={s.link} href="/">
+        Home
+      </Link>
+      <Link className={s.link} href="/Transactions">
+        Transactions
+      </Link>
+      <Link className={s.link} href="/Categories">
+        Categories
+      </Link>
+      <button className={s.button}>
+        Log Out
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24.000000pt"
+          height="24.000000pt"
+          viewBox="0 0 512.000000 512.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+            fill="#fff"
+            stroke="none"
+          >
+            <path
+              d="M740 5113 c-201 -34 -381 -193 -443 -388 l-22 -70 0 -1775 0 -1775
 26 -71 c33 -90 88 -173 153 -230 44 -39 1100 -659 1268 -745 71 -36 164 -59
 240 -59 183 0 385 112 477 265 65 108 75 150 81 360 l5 190 465 5 c449 5 467
 6 523 27 188 71 321 225 362 418 18 85 22 716 5 777 -22 79 -91 131 -175 131
@@ -28,17 +40,19 @@ fill="#fff" stroke="none">
 3 1116 2 44 -27 c28 -18 53 -44 68 -72 23 -44 23 -45 23 -435 0 -358 2 -394
 19 -431 57 -126 217 -149 305 -45 45 54 48 84 44 519 -3 394 -4 408 -26 471
 -32 89 -66 145 -130 212 -65 69 -130 112 -220 147 l-67 26 -1340 1 c-737 1
--1351 0 -1365 -3z"/>
-<path d="M4110 3661 c-89 -28 -140 -92 -140 -175 0 -72 19 -102 139 -221 l111
+-1351 0 -1365 -3z"
+            />
+            <path
+              d="M4110 3661 c-89 -28 -140 -92 -140 -175 0 -72 19 -102 139 -221 l111
 -110 -709 -5 -709 -5 -39 -31 c-49 -40 -73 -87 -73 -148 0 -66 37 -128 93
 -159 l42 -22 693 -5 692 -5 -101 -100 c-55 -55 -109 -117 -120 -137 -21 -41
 -25 -111 -8 -155 23 -61 100 -113 169 -113 70 0 108 31 397 321 234 236 283
 291 292 324 14 50 14 60 0 110 -9 33 -58 87 -283 313 -149 151 -289 284 -311
-297 -46 27 -99 37 -135 26z"/>
-</g>
-</svg>
-
-            </button>
-        </nav>
-    )
-}
+297 -46 27 -99 37 -135 26z"
+            />
+          </g>
+        </svg>
+      </button>
+    </nav>
+  );
+};

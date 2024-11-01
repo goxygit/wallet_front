@@ -1,0 +1,59 @@
+@import "../../../app/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  .pagination {
+    display: flex;
+    align-content: center;
+    justify-content: end;
+    margin-bottom: 24px;
+    .button {
+      background-color: $header-color;
+      border: none;
+      outline: none;
+      font-family: "SUSE";
+      border-radius: 2px;
+      font-size: 18px;
+      width: min-content;
+      color: $transactions-unactive-button-color;
+      cursor: pointer;
+    }
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      font-family: "SUSE";
+      font-size: 18px;
+      margin: 0 20px;
+
+      background-color: $transactions-page-color;
+      color: $home-text-color;
+    }
+  }
+  .table_block {
+    background-color: $header-color;
+    height: min-content;
+    padding: 14px 20px;
+    border-radius: 8px;
+    .table {
+      width: 100%;
+      font-family: "SUSE";
+      color: $home-text-color;
+      border-collapse: collapse; /* Убирает зазоры между ячейками */
+      table-layout: fixed; /* Все колонки имеют одинаковую ширину */
+      text-align: left;
+      & th,
+      td {
+        padding: 6px 0;
+        width: calc(100% / 6); /* Каждая колонка будет занимать 1/6 ширины */
+      }
+      & th:last-child,
+      td:last-child {
+        text-align: right; /* Выравнивание текста по правому краю */
+      }
+    }
+  }
+}

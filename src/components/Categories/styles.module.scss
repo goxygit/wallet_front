@@ -1,0 +1,75 @@
+@import "../../app/variables";
+
+.categories_block {
+  height: 100vh;
+  width: 100%;
+  font-family: SUSE;
+  color: $home-text-color;
+  .categories {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 88px;
+    width: 100%;
+    background-color: $header-color;
+    .elements {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      .element {
+        position: relative;
+        background-color: $categories-background-color;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s;
+        .icons {
+          position: absolute;
+          left: 8px; // Позиция для левой иконки
+          right: 8px;
+          top: 50%;
+          display: flex;
+          justify-content: space-between; // Расположение иконок по краям
+          opacity: 0;
+          transform: translateY(-50%);
+
+          gap: 8px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+
+        // Текст отображается по умолчанию
+        .text {
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+
+        &:hover {
+          background-color: $categories-hover-color;
+          .text {
+            opacity: 0; // Скрываем текст при наведении
+          }
+          .icons {
+            opacity: 1; // Показываем иконки при наведении
+          }
+        }
+      }
+    }
+    .h {
+      margin: 0 0 24px;
+    }
+    .manage {
+      color: $inputs-text-color;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-family: 17px;
+      .image {
+        margin-right: 8px;
+      }
+    }
+  }
+}

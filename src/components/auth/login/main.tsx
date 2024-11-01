@@ -2,7 +2,7 @@
 import { useAppDispatch } from "@/redux/store"
 import { loginThunk } from "@/services/auth_servises"
 //@ts-ignore
-import { useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import s from './styles.module.scss'
 
 
@@ -13,10 +13,10 @@ interface IFormInput {
 }
 
 export default ()=> {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
     const dispatch = useAppDispatch()
     // Функция, которая будет вызвана при отправке формы
-    const onSubmit = async (data:IFormInput) => {
+    const onSubmit: SubmitHandler<IFormInput> = async (data:IFormInput) => {
       console.log(data)
       await dispatch(loginThunk({email: data.email,password: data.password}))
     };

@@ -1,7 +1,12 @@
 import { apiUrl } from "./axios";
 import axios from './axios'
 
-export const iam = async () => {
+type IamResponse = {
+  status: number;
+  data: any;
+};
+
+export const iam = async (): Promise<IamResponse | undefined> => {
   try{
     const {data, status} = await axios.get(
       `${apiUrl}/user/auth`,{
@@ -9,7 +14,7 @@ export const iam = async () => {
       }
     )
     console.log(status)
-    return status
+    return {status, data}
   }
     
   

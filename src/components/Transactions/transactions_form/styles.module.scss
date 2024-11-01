@@ -1,0 +1,84 @@
+@import "../../../app/variables";
+.transaction_block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 88px;
+  align-items: center;
+  height: 384px;
+  color: $home-text-color;
+
+  font-family: "SUSE";
+  .h2 {
+    font-size: 28px;
+    font-weight: normal;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    background-color: $header-color;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    .inputs {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      position: relative;
+      flex-direction: column;
+    }
+    .headers {
+      margin: 0 0 8px 6px;
+      font-size: 18px;
+    }
+    .input {
+      margin-bottom: 28px;
+      height: 40px;
+      outline: none;
+      background-color: transparentize($color: #00000000, $amount: 0);
+      border-radius: 6px;
+      border: none;
+      color: $inputs-text-color;
+      background-color: $transactions-input-background-color;
+      padding: 0 8px;
+      font-size: 17px;
+      width: 100%;
+    }
+    .error {
+      font-size: 13px;
+      position: absolute;
+      bottom: 8px;
+    }
+
+    .send {
+      background-color: $home-buttom-color;
+      border: none;
+      cursor: pointer;
+      color: $home-text-color;
+    }
+    .manage {
+      color: $inputs-text-color;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .image {
+        margin-right: 8px;
+      }
+    }
+    .radio_group {
+      display: flex;
+      margin-bottom: 28px;
+      label {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      .radio[type="radio"] {
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

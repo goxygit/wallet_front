@@ -1,0 +1,57 @@
+@import "../../../app/variables";
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.445);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: $modal-background;
+    padding: 24px;
+    width: 320px;
+    border-radius: 8px;
+    .text {
+      margin-bottom: 8px;
+      font-family: 14px;
+    }
+    .input_container {
+      width: 100%;
+      margin-bottom: 12px;
+      .input {
+        width: 100%;
+        background-color: $transactions-input-background-color;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        padding: 12px 12px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .buttons {
+      .button {
+        color: #fff;
+        border: none;
+        padding: 12px 16px;
+        margin-right: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .send {
+        background-color: $home-buttom-color;
+      }
+      .close {
+        background-color: $header-button-color;
+      }
+    }
+  }
+}

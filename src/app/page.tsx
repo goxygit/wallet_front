@@ -1,26 +1,15 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import UnLoginPage from '../components/unlogin/page';
-import { iam } from '../utils/req';
+"use client";
+import { useEffect, useState } from "react";
+import UnLoginPage from "../components/unlogin/page";
+import { checkAuth } from "@/utils/check_auth";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    const checkAuth = async () => {
-      const isAuth = await iam(); // Выполняем проверку авторизации
-      console.log('Авторизация:', isAuth);
-
-      if (!isAuth) {
-        router.push('/auth'); // Если не авторизован, редирект на страницу авторизации
-      } else {
-        setLoading(false); // Если авторизован, отключаем режим загрузки
-      }
-    };
-
-    checkAuth();
+    checkAuth(setLoading, router);
   }, []);
 
   if (loading) {

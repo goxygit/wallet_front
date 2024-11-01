@@ -1,0 +1,73 @@
+@import "../../../app/variables";
+.statistics_block {
+  width: 340px;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 88px;
+  background-color: $header-color;
+  color: $home-text-color;
+  font-family: "SUSE";
+  padding: 8px 12px;
+  border-radius: 8px;
+  height: 384px;
+
+  .value_block {
+    display: flex;
+    justify-content: space-between;
+
+    .value_blocks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      .value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        height: 32px;
+        width: calc(100% - 12px);
+        margin-top: 12px;
+      }
+      .value_income {
+        background-color: $transactions-icnome-background;
+      }
+      .value_expense {
+        background-color: $transactions-expense-background;
+      }
+    }
+  }
+  .diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .first_element {
+      margin-right: 16px;
+    }
+    .info_element {
+      display: flex;
+      align-items: center;
+      font-family: 17px;
+    }
+    .color_block_green {
+      margin-right: 8px;
+      background-color: #1fc29f;
+      width: 16px;
+      height: 12px;
+    }
+    .color_block_red {
+      margin-right: 8px;
+      background-color: #fd7f4a;
+      width: 16px;
+      height: 12px;
+    }
+  }
+}

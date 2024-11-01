@@ -1,0 +1,10 @@
+.transactions_page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 340px; /* 7/10 и 3/10 от ширины */
+  grid-template-rows: 520px auto; /* Две строки, высота которых определяется содержимым */
+  gap: 20px; /* Отступы между элементами, опционально */
+  .third_element {
+    grid-column: 1 / 3;
+  }
+}
